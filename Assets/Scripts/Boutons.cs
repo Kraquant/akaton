@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Button : MonoBehaviour
+public class Boutons : MonoBehaviour
 {
     [System.Serializable]
     public class ButtonEvent : UnityEvent { }
@@ -9,6 +9,7 @@ public class Button : MonoBehaviour
     public float pressLength;
     public bool pressed;
     public ButtonEvent downEvent;
+    public bool allume;
 
     Vector3 startPos;
     Rigidbody rb;
