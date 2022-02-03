@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 7941087685653395296}
   - component: {fileID: 8778934566999997157}
   m_Layer: 0
-  m_Name: Thumb_Collider_01
+  m_Name: Thumb_Collider_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,10 +164,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followObject: {fileID: 3793880589583852686}
-  followSpeed: 30
-  rotateSpeed: 100
+  followSpeed: 50
+  rotateSpeed: 120
   positionOffset: {x: 0.01, y: 0, z: -0.08}
   rotationOffset: {x: 0, y: 0, z: -90}
+  capsuleColliders:
+  - {fileID: 6927653050398334399}
+  - {fileID: 5251045396433869103}
+  - {fileID: 6000202844044513596}
+  - {fileID: 281614443370390778}
+  - {fileID: 1962121928964423503}
+  - {fileID: 494432416483335037}
+  - {fileID: 7157483259992207143}
+  - {fileID: 5020240254378577827}
+  - {fileID: 3622093567107100391}
+  - {fileID: 2278290006197873812}
+  - {fileID: 1692838073458525860}
+  - {fileID: 3370085807563135354}
+  - {fileID: 7699967607161143942}
+  - {fileID: 5631506948313613358}
+  boxColliders:
+  - {fileID: 1044744610004666880}
   speed: 10
 --- !u!1 &994834448034039106
 GameObject:
@@ -286,7 +303,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1066694502531052471}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.505}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8398426473097479627}
@@ -483,7 +500,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.07581496
-  m_Center: {x: -0.04, y: -0.04, z: 0.48}
+  m_Center: {x: -0.04, y: -0.04, z: 0}
 --- !u!114 &6859234313424019242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -513,10 +530,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3985034159300895860}
+        m_TargetAssemblyTypeName: Hand, Assembly-CSharp
+        m_MethodName: ToggleVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3985034159300895860}
+        m_TargetAssemblyTypeName: Hand, Assembly-CSharp
+        m_MethodName: ToggleVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1383,7 +1424,7 @@ SphereCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.07581496
-  m_Center: {x: 0.04, y: -0.04, z: 0.48}
+  m_Center: {x: 0.04, y: -0.04, z: 0}
 --- !u!114 &3531117811598687018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1413,10 +1454,34 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3889167738456388972}
+        m_TargetAssemblyTypeName: Hand, Assembly-CSharp
+        m_MethodName: ToggleVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3889167738456388972}
+        m_TargetAssemblyTypeName: Hand, Assembly-CSharp
+        m_MethodName: ToggleVisibility
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_OnHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -1717,7 +1782,7 @@ GameObject:
   - component: {fileID: 7792387942310705773}
   - component: {fileID: 4767816127380918814}
   m_Layer: 0
-  m_Name: Thumb_Collider_01 (1)
+  m_Name: Thumb_Collider_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2395,10 +2460,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   followObject: {fileID: 1066694502531052471}
-  followSpeed: 30
-  rotateSpeed: 100
+  followSpeed: 50
+  rotateSpeed: 120
   positionOffset: {x: 0.01, y: 0, z: -0.08}
   rotationOffset: {x: 0, y: 0, z: 90}
+  capsuleColliders:
+  - {fileID: 5623204203598981438}
+  - {fileID: 1659943879289953020}
+  - {fileID: 8311683303349073934}
+  - {fileID: 7614157280376767303}
+  - {fileID: 5441008979206535601}
+  - {fileID: 1075109356468501777}
+  - {fileID: 6436003332806840316}
+  - {fileID: 994834448034039106}
+  - {fileID: 7024598697843680467}
+  - {fileID: 6551120090311211568}
+  - {fileID: 7516389141612434665}
+  - {fileID: 7059926267643911659}
+  - {fileID: 7679999780551152569}
+  - {fileID: 304719541506326943}
+  boxColliders:
+  - {fileID: 2535622729829763132}
   speed: 10
 --- !u!1001 &428638362678904775
 PrefabInstance:

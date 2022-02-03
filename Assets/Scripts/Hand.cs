@@ -25,6 +25,9 @@ public class Hand : MonoBehaviour
     [SerializeField] private Vector3 positionOffset;
     [SerializeField] private Vector3 rotationOffset;
 
+    [SerializeField] private List<GameObject> capsuleColliders;
+    [SerializeField] private List<GameObject> boxColliders;
+
 
     public float speed = 1.0f;
 
@@ -95,6 +98,18 @@ public class Hand : MonoBehaviour
     public void ToggleVisibility()
     {
         mesh.enabled = !mesh.enabled;
+
+        foreach(GameObject colliderObject in capsuleColliders)
+        {
+            CapsuleCollider collider = colliderObject.GetComponent<CapsuleCollider>();
+            collider.enabled = !collider.enabled;
+        }
+
+        foreach (GameObject colliderObject in boxColliders)
+        {
+            BoxCollider collider = colliderObject.GetComponent<BoxCollider>();
+            collider.enabled = !collider.enabled;
+        }
     }
 
 }
