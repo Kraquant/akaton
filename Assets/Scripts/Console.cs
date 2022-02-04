@@ -39,7 +39,7 @@ public class Console : MonoBehaviour
                         case "BR":
                             affTraj("TrajRB");
                             break;
-                        case "Bve":
+                        case "BVe":
                             affTraj("TrajVeB");
                             break;
                         case "BJ":
@@ -81,7 +81,7 @@ public class Console : MonoBehaviour
                         case "BB":
                             affTraj("TrajRB");
                             break;
-                        case "Bve":
+                        case "BVe":
                             affTraj("TrajRVe");
                             break;
                         case "BJ":
@@ -165,7 +165,7 @@ public class Console : MonoBehaviour
                         case "BB":
                             affTraj("TrajJB");
                             break;
-                        case "Bve":
+                        case "BVe":
                             affTraj("TrajJVe");
                             break;
                         case "BVi":
@@ -205,7 +205,7 @@ public class Console : MonoBehaviour
                         case "BB":
                             affTraj("TrajBVi");
                             break;
-                        case "Bve":
+                        case "BVe":
                             affTraj("TrajVeVi");
                             break;
                         case "BJ":
@@ -274,11 +274,11 @@ public class Console : MonoBehaviour
         switch (config)
         {
             case 0:
-                aRelier.Add("BJ");
                 aRelier.Add("BVe");
-                aRelier.Add("BVi");
+                aRelier.Add("BJ");
                 aRelier.Add("BB");
                 aRelier.Add("BR");
+                aRelier.Add("BVi");
                 break;
             case 1:
                 break;
