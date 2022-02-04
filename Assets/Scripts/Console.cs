@@ -27,19 +27,18 @@ public class Console : MonoBehaviour
     {
         if (!GameObject.Find("BB").GetComponent<Boutons>().allume)
         {
-            GameObject.Find("BB").GetComponent<Boutons>().allume = true;
-            ordre += 1;
             if (aRelier[ordre] == "BB")
             {
-                if (ordre == 4) { StartCoroutine(resoudre()); }
-                else if (ordre > 0)
+                GameObject.Find("BB").GetComponent<Boutons>().allume = true;
+                ordre += 1;
+                if (ordre > 0)
                 {
                     switch (aRelier[ordre - 1])
                     {
                         case "BR":
                             affTraj("TrajRB");
                             break;
-                        case "Bve":
+                        case "BVe":
                             affTraj("TrajVeB");
                             break;
                         case "BJ":
@@ -50,10 +49,11 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
+                if (ordre == 4) { StartCoroutine(resoudre()); }
             }
             else
             {
-                ordre = 0;
+                ordre = -1;
                 for (int i = 0; i < 5; i++)
                 {
                     GameObject.Find(aRelier[i]).GetComponent<Boutons>().allume = false;
@@ -69,19 +69,18 @@ public class Console : MonoBehaviour
     {
         if (!GameObject.Find("BR").GetComponent<Boutons>().allume)
         {
-            GameObject.Find("BR").GetComponent<Boutons>().allume = true;
-            ordre += 1;
             if (aRelier[ordre] == "BR")
             {
-                if (ordre == 4) { StartCoroutine(resoudre()); }
-                else if (ordre > 0)
+                GameObject.Find("BR").GetComponent<Boutons>().allume = true;
+                ordre += 1;
+                if (ordre > 0)
                 {
                     switch (aRelier[ordre - 1])
                     {
                         case "BB":
                             affTraj("TrajRB");
                             break;
-                        case "Bve":
+                        case "BVe":
                             affTraj("TrajRVe");
                             break;
                         case "BJ":
@@ -92,10 +91,11 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
+                if (ordre == 4) { StartCoroutine(resoudre()); }
             }
             else
             {
-                ordre = 0;
+                ordre = -1;
                 for (int i = 0; i < 5; i++)
                 {
                     GameObject.Find(aRelier[i]).GetComponent<Boutons>().allume = false;
@@ -110,12 +110,11 @@ public class Console : MonoBehaviour
     {
         if (GameObject.Find("BVe").GetComponent<Boutons>().allume == false)
         {
-            GameObject.Find("BVe").GetComponent<Boutons>().allume = true;
-            ordre += 1;
             if (aRelier[ordre] == "BVe")
             {
-                if (ordre == 4) { StartCoroutine(resoudre()); }
-                else if (ordre > 0)
+                GameObject.Find("BVe").GetComponent<Boutons>().allume = true;
+                ordre += 1;
+                if (ordre > 0)
                 {
                     switch (aRelier[ordre - 1])
                     {
@@ -133,10 +132,11 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
+                if (ordre == 4) { StartCoroutine(resoudre()); }
             }
             else
             {
-                ordre = 0;
+                ordre = -1;
                 for (int i = 0; i < 5; i++)
                 {
                     GameObject.Find(aRelier[i]).GetComponent<Boutons>().allume = false;
@@ -150,12 +150,11 @@ public class Console : MonoBehaviour
     {
         if (!GameObject.Find("BJ").GetComponent<Boutons>().allume)
         {
-            GameObject.Find("BJ").GetComponent<Boutons>().allume = true;
-            ordre += 1;
             if (aRelier[ordre] == "BJ")
             {
-                if (ordre == 4) { StartCoroutine(resoudre()); }
-                else if (ordre > 0)
+                GameObject.Find("BJ").GetComponent<Boutons>().allume = true;
+                ordre += 1;
+                if (ordre > 0)
                 {
                     switch (aRelier[ordre - 1])
                     {
@@ -165,7 +164,7 @@ public class Console : MonoBehaviour
                         case "BB":
                             affTraj("TrajJB");
                             break;
-                        case "Bve":
+                        case "BVe":
                             affTraj("TrajJVe");
                             break;
                         case "BVi":
@@ -173,10 +172,11 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
+                if (ordre == 4) { StartCoroutine(resoudre()); }
             }
             else
             {
-                ordre = 0;
+                ordre = -1;
                 for (int i = 0; i < 5; i++)
                 {
                     GameObject.Find(aRelier[i]).GetComponent<Boutons>().allume = false;
@@ -190,12 +190,11 @@ public class Console : MonoBehaviour
     {
         if (!GameObject.Find("BVi").GetComponent<Boutons>().allume)
         {
-            GameObject.Find("BVi").GetComponent<Boutons>().allume = true;
-            ordre += 1;
             if (aRelier[ordre] == "BVi")
             {
-                if (ordre == 4) { StartCoroutine(resoudre()); }
-                else if (ordre > 0)
+                GameObject.Find("BVi").GetComponent<Boutons>().allume = true;
+                ordre += 1;
+                if (ordre > 0)
                 {
                     switch (aRelier[ordre - 1])
                     {
@@ -205,7 +204,7 @@ public class Console : MonoBehaviour
                         case "BB":
                             affTraj("TrajBVi");
                             break;
-                        case "Bve":
+                        case "BVe":
                             affTraj("TrajVeVi");
                             break;
                         case "BJ":
@@ -213,10 +212,11 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
+                if (ordre == 4) { StartCoroutine(resoudre()); }
             }
             else
             {
-                ordre = 0;
+                ordre = -1;
                 for (int i = 0; i < 5; i++)
                 {
                     GameObject.Find(aRelier[i]).GetComponent<Boutons>().allume = false;
@@ -274,11 +274,11 @@ public class Console : MonoBehaviour
         switch (config)
         {
             case 0:
-                aRelier.Add("BJ");
                 aRelier.Add("BVe");
-                aRelier.Add("BVi");
+                aRelier.Add("BJ");
                 aRelier.Add("BB");
                 aRelier.Add("BR");
+                aRelier.Add("BVi");
                 break;
             case 1:
                 break;
