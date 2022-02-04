@@ -481,4 +481,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb46857bcf8c91641a8c73d2308418c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 15
+  startingTime: 40
