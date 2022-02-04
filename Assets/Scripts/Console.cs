@@ -9,29 +9,39 @@ public class Console : MonoBehaviour
     public List<string> aRelier = new List<string>();
     System.Collections.IEnumerator resoudre()
     {
-        List<string> aClignoter = new List<string>();
-        aClignoter.Add("BR");
-        aClignoter.Add("BVe");
-        aClignoter.Add("BB");
-        aClignoter.Add("BJ");
-        aClignoter.Add("BVi");
-        affTrajs(aClignoter);
+        GameObject.Find("BB").GetComponent<Boutons>().allume = true;
+        GameObject.Find("BR").GetComponent<Boutons>().allume = true;
+        GameObject.Find("BVe").GetComponent<Boutons>().allume = true;
+        GameObject.Find("BVi").GetComponent<Boutons>().allume = true;
+        GameObject.Find("BJ").GetComponent<Boutons>().allume = true;
         yield return new WaitForSecondsRealtime(0.5f);
-        cacherTrajs(aClignoter);
+        GameObject.Find("BB").GetComponent<Boutons>().allume = false;
+        GameObject.Find("BR").GetComponent<Boutons>().allume = false;
+        GameObject.Find("BVe").GetComponent<Boutons>().allume = false;
+        GameObject.Find("BVi").GetComponent<Boutons>().allume = false;
+        GameObject.Find("BJ").GetComponent<Boutons>().allume = false;
         yield return new WaitForSecondsRealtime(0.5f);
-        affTrajs(aClignoter);
+        GameObject.Find("BB").GetComponent<Boutons>().allume = true;
+        GameObject.Find("BR").GetComponent<Boutons>().allume = true;
+        GameObject.Find("BVe").GetComponent<Boutons>().allume = true;
+        GameObject.Find("BVi").GetComponent<Boutons>().allume = true;
+        GameObject.Find("BJ").GetComponent<Boutons>().allume = true;
         yield return new WaitForSecondsRealtime(0.5f);
-        cacherTrajs(aClignoter);
+        GameObject.Find("BB").GetComponent<Boutons>().allume = false;
+        GameObject.Find("BR").GetComponent<Boutons>().allume = false;
+        GameObject.Find("BVe").GetComponent<Boutons>().allume = false;
+        GameObject.Find("BVi").GetComponent<Boutons>().allume = false;
+        GameObject.Find("BJ").GetComponent<Boutons>().allume = false;
     }
     public void OnBBPress()
     {
         if (!GameObject.Find("BB").GetComponent<Boutons>().allume)
         {
-            if (aRelier[ordre] == "BB")
+            if (aRelier[ordre + 1] == "BB")
             {
                 GameObject.Find("BB").GetComponent<Boutons>().allume = true;
                 ordre += 1;
-                if (ordre > 0)
+                if (ordre > 0 && ordre < 5)
                 {
                     switch (aRelier[ordre - 1])
                     {
@@ -49,7 +59,10 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
-                if (ordre == 4) { StartCoroutine(resoudre()); }
+                if (ordre == 5) {
+                    StartCoroutine(resoudre());
+                    ordre -= 1;
+                }
             }
             else
             {
@@ -69,11 +82,11 @@ public class Console : MonoBehaviour
     {
         if (!GameObject.Find("BR").GetComponent<Boutons>().allume)
         {
-            if (aRelier[ordre] == "BR")
+            if (aRelier[ordre + 1] == "BR")
             {
                 GameObject.Find("BR").GetComponent<Boutons>().allume = true;
                 ordre += 1;
-                if (ordre > 0)
+                if (ordre > 0 && ordre < 5)
                 {
                     switch (aRelier[ordre - 1])
                     {
@@ -91,7 +104,10 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
-                if (ordre == 4) { StartCoroutine(resoudre()); }
+                if (ordre == 5) {
+                    StartCoroutine(resoudre());
+                    ordre -= 1;
+                }
             }
             else
             {
@@ -110,11 +126,11 @@ public class Console : MonoBehaviour
     {
         if (GameObject.Find("BVe").GetComponent<Boutons>().allume == false)
         {
-            if (aRelier[ordre] == "BVe")
+            if (aRelier[ordre + 1] == "BVe")
             {
                 GameObject.Find("BVe").GetComponent<Boutons>().allume = true;
                 ordre += 1;
-                if (ordre > 0)
+                if (ordre > 0 && ordre < 5)
                 {
                     switch (aRelier[ordre - 1])
                     {
@@ -132,7 +148,10 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
-                if (ordre == 4) { StartCoroutine(resoudre()); }
+                if (ordre == 5) {
+                    ordre -= 1; 
+                    StartCoroutine(resoudre());
+                }
             }
             else
             {
@@ -150,11 +169,11 @@ public class Console : MonoBehaviour
     {
         if (!GameObject.Find("BJ").GetComponent<Boutons>().allume)
         {
-            if (aRelier[ordre] == "BJ")
+            if (aRelier[ordre + 1] == "BJ" && ordre < 5)
             {
                 GameObject.Find("BJ").GetComponent<Boutons>().allume = true;
                 ordre += 1;
-                if (ordre > 0)
+                if (ordre > 0 && ordre < 5)
                 {
                     switch (aRelier[ordre - 1])
                     {
@@ -172,7 +191,10 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
-                if (ordre == 4) { StartCoroutine(resoudre()); }
+                if (ordre == 5) {
+                    ordre -= 1; 
+                    StartCoroutine(resoudre());
+                }
             }
             else
             {
@@ -190,11 +212,11 @@ public class Console : MonoBehaviour
     {
         if (!GameObject.Find("BVi").GetComponent<Boutons>().allume)
         {
-            if (aRelier[ordre] == "BVi")
+            if (aRelier[ordre + 1] == "BVi")
             {
                 GameObject.Find("BVi").GetComponent<Boutons>().allume = true;
                 ordre += 1;
-                if (ordre > 0)
+                if (ordre > 0 && ordre < 5)
                 {
                     switch (aRelier[ordre - 1])
                     {
@@ -212,7 +234,10 @@ public class Console : MonoBehaviour
                             break;
                     }
                 }
-                if (ordre == 4) { StartCoroutine(resoudre()); }
+                if (ordre == 5) {
+                    ordre -= 1; 
+                    StartCoroutine(resoudre());
+                }
             }
             else
             {
