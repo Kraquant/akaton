@@ -306,6 +306,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   allume: 0
+  allumeMat: {fileID: 2100000, guid: 4c3abfb6ad895d44c994fbe815ff9ede, type: 2}
+  eteintMat: {fileID: 2100000, guid: e77fcd85474d38c47b9d3a8d6454012a, type: 2}
 --- !u!54 &158627416
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -474,6 +476,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   allume: 0
+  allumeMat: {fileID: 2100000, guid: 4c3abfb6ad895d44c994fbe815ff9ede, type: 2}
+  eteintMat: {fileID: 2100000, guid: e77fcd85474d38c47b9d3a8d6454012a, type: 2}
 --- !u!54 &169391323
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -804,6 +808,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   allume: 0
+  allumeMat: {fileID: 2100000, guid: c9f26c85e1daedb46b980e75c4ef9d1b, type: 2}
+  eteintMat: {fileID: 2100000, guid: 822da463acf682c41bf9fb3d3fd5a164, type: 2}
 --- !u!54 &295276066
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -972,6 +978,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   allume: 0
+  allumeMat: {fileID: 2100000, guid: a2a2115c94dd77f4295dfabbcb026a8a, type: 2}
+  eteintMat: {fileID: 2100000, guid: 879e0cd6a72fec540b250216bcdfcd80, type: 2}
 --- !u!54 &301350978
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1350,6 +1358,14 @@ PrefabInstance:
       value: 0.51777923
       objectReference: {fileID: 0}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: allumeMat
+      value: 
+      objectReference: {fileID: 2100000, guid: c9f26c85e1daedb46b980e75c4ef9d1b, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: eteintMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 822da463acf682c41bf9fb3d3fd5a164, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1054657139}
@@ -1450,6 +1466,14 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 1.1177791
       objectReference: {fileID: 0}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: allumeMat
+      value: 
+      objectReference: {fileID: 2100000, guid: c9f26c85e1daedb46b980e75c4ef9d1b, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: eteintMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 822da463acf682c41bf9fb3d3fd5a164, type: 2}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1589,7 +1613,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1054657139}
         m_TargetAssemblyTypeName: Events, Assembly-CSharp
-        m_MethodName: OnCustomButtonPress
+        m_MethodName: OnButton0Press
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1600,6 +1624,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   allume: 0
+  allumeMat: {fileID: 2100000, guid: a2a2115c94dd77f4295dfabbcb026a8a, type: 2}
+  eteintMat: {fileID: 2100000, guid: 879e0cd6a72fec540b250216bcdfcd80, type: 2}
 --- !u!54 &862477779
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1812,7 +1838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 863017891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.833, y: 1.35, z: 1.353}
+  m_LocalPosition: {x: 1.833, y: 1.59, z: 0.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2207,6 +2233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a55d3ef0ffe83774abf6419648474bf4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  config: -1
 --- !u!1 &1081737408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,6 +2426,14 @@ PrefabInstance:
       value: 1.1177791
       objectReference: {fileID: 0}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: allumeMat
+      value: 
+      objectReference: {fileID: 2100000, guid: a2a2115c94dd77f4295dfabbcb026a8a, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: eteintMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 879e0cd6a72fec540b250216bcdfcd80, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1054657139}
@@ -2551,6 +2586,14 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.51777923
       objectReference: {fileID: 0}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: allumeMat
+      value: 
+      objectReference: {fileID: 2100000, guid: a2a2115c94dd77f4295dfabbcb026a8a, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: eteintMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 879e0cd6a72fec540b250216bcdfcd80, type: 2}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2727,6 +2770,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   allume: 0
+  allumeMat: {fileID: 2100000, guid: e65c3b7518961ea4fadf7108ebd24f86, type: 2}
+  eteintMat: {fileID: 2100000, guid: 753ba3be6c0fae547bfd6b6b2cb320b6, type: 2}
 --- !u!54 &1365639103
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3170,6 +3215,14 @@ PrefabInstance:
       value: 0.51777923
       objectReference: {fileID: 0}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: allumeMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c3abfb6ad895d44c994fbe815ff9ede, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: eteintMat
+      value: 
+      objectReference: {fileID: 2100000, guid: e77fcd85474d38c47b9d3a8d6454012a, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1054657139}
@@ -3275,6 +3328,14 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.51777923
       objectReference: {fileID: 0}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: allumeMat
+      value: 
+      objectReference: {fileID: 2100000, guid: e65c3b7518961ea4fadf7108ebd24f86, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: eteintMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 753ba3be6c0fae547bfd6b6b2cb320b6, type: 2}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3446,6 +3507,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   allume: 0
+  allumeMat: {fileID: 2100000, guid: e65c3b7518961ea4fadf7108ebd24f86, type: 2}
+  eteintMat: {fileID: 2100000, guid: 753ba3be6c0fae547bfd6b6b2cb320b6, type: 2}
 --- !u!54 &1704987104
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3712,6 +3775,14 @@ PrefabInstance:
       value: 1.1177791
       objectReference: {fileID: 0}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: allumeMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 4c3abfb6ad895d44c994fbe815ff9ede, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: eteintMat
+      value: 
+      objectReference: {fileID: 2100000, guid: e77fcd85474d38c47b9d3a8d6454012a, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1054657139}
@@ -3975,6 +4046,8 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   allume: 0
+  allumeMat: {fileID: 2100000, guid: c9f26c85e1daedb46b980e75c4ef9d1b, type: 2}
+  eteintMat: {fileID: 2100000, guid: 822da463acf682c41bf9fb3d3fd5a164, type: 2}
 --- !u!54 &2034934653
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4073,6 +4146,14 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 1.1177791
       objectReference: {fileID: 0}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: allumeMat
+      value: 
+      objectReference: {fileID: 2100000, guid: e65c3b7518961ea4fadf7108ebd24f86, type: 2}
+    - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: eteintMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 753ba3be6c0fae547bfd6b6b2cb320b6, type: 2}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
