@@ -14,14 +14,25 @@ public class Boutons : MonoBehaviour
     Vector3 startPos;
     Rigidbody rb;
 
+    public Material allumeMat;
+    public Material eteintMat;
+    
     void Start()
     {
         startPos = transform.position;
         rb = GetComponent<Rigidbody>();
+        this.GetComponent<MeshRenderer>().material = eteintMat;
     }
 
     void Update()
     {
+        if (allume) //&& electricity);
+        {
+            this.GetComponent<MeshRenderer>().material = allumeMat;
+        } else
+        {
+            this.GetComponent<MeshRenderer>().material = eteintMat;
+        }
         // If our distance is greater than what we specified as a press
         // set it to our max distance and register a press if we haven't already
         float distance = Mathf.Abs(transform.position.y - startPos.y);
