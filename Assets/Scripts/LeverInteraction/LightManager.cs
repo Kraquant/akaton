@@ -7,7 +7,7 @@ public class LightManager : MonoBehaviour
     public List<GameObject> lights;
 
     private float currentPower;
-    public float maxCapacity;
+    public float maxCapacity = 40;
 
     private bool lightsOn;
     private float tempPower;
@@ -27,11 +27,8 @@ public class LightManager : MonoBehaviour
         if (currentPower <= 0)
         {
             currentPower = 0;
-            if (lightsOn)
-            {
-                lightsOn = false;
-                shutOffLights();
-            }
+            lightsOn = false;
+            shutOffLights();
 
         }
     }
@@ -48,6 +45,7 @@ public class LightManager : MonoBehaviour
         {
             turnOnLights();
         }
+        tempPower = 0;
     }
 
     public void leverReleased()
@@ -67,11 +65,22 @@ public class LightManager : MonoBehaviour
 
     private void shutOffLights()
     {
-
+        Debug.Log("Extinction des lumieres");
+        foreach (GameObject smartLight in lights)
+        {
+            LightToggle currentLightToggle = smartLight.GetComponent<LightToggle>();
+            currentLightToggle.turnOff();
+        }
     }
 
     private void turnOnLights()
     {
+        Debug.Log("Allumage des lumieres");
+        foreach (GameObject smartLight in lights)
+        {
+            LightToggle currentLightToggle = smartLight.GetComponent<LightToggle>();
+            currentLightToggle.turnOn();
+        }
 
     }
 }
