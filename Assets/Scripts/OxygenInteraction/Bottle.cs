@@ -6,6 +6,11 @@ public class Bottle : MonoBehaviour
 {
     // Start is called before the first frame update
     private bool isFull;
+
+    public Material matEmpty;
+
+    public GameObject cylinder;
+
     void Start()
     {
         isFull = true;
@@ -19,6 +24,7 @@ public class Bottle : MonoBehaviour
     public void emptyBottle()
     {
         isFull = false;
+        cylinder.GetComponent<MeshRenderer>().material = matEmpty;
 
     }
 
