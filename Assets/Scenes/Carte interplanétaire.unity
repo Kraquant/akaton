@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.24647519, g: 0.28234503, b: 0.34570286, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -466,6 +466,10 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 0.24000008
       objectReference: {fileID: 0}
+    - target: {fileID: 3592910982496392802, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: allumeMat
       value: 
@@ -628,7 +632,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b48046e0971696047bab1594e6e6a04e, type: 2}
+  - {fileID: 2100000, guid: 00a3425e739bd754097401a6e7ba86b5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -792,6 +796,10 @@ PrefabInstance:
     - target: {fileID: 3592910982496392800, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 2.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 3592910982496392802, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: allumeMat
@@ -1433,7 +1441,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3846bb4526563e542850bed9dd6b90bc, type: 2}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: pressLength
-      value: 0.03
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2157,7 +2165,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 02f3c15dd86e37d4fb922198f72c6508, type: 2}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: pressLength
-      value: 0.03
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2397,7 +2405,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4a887e8b33fe9d14790bb2dab49047a0, type: 2}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: pressLength
-      value: 0.03
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 3592910982496392803, guid: d7437177997f0b44e8eb0df9235f0e18, type: 3}
       propertyPath: downEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
